@@ -6,73 +6,41 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin, Search } from 'lucide-react'
 const navItems = [
     {
         label: 'Home',
-<<<<<<< HEAD
-        href: '/#home',
-=======
         href: '/',
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
     },
     {
         label: 'About Us',
         href: '/about',
         children: [
-<<<<<<< HEAD
-            { label: 'About Us', href: '/#about' },
-            { label: 'Vision & Mission', href: '/#vision' },
-            { label: 'Affiliation & Accreditation', href: '/#accreditation' },
-            { label: 'Management', href: '/#management' },
-            { label: 'Principal', href: '/#principal' },
-            { label: 'Administration', href: '/#administration' },
-            { label: 'Governing Body', href: '/#governing-body' },
-            { label: 'Academic Council', href: '/#academic-council' },
-=======
             { label: 'About Us', href: '/about#about' },
             { label: 'Vision & Mission', href: '/about#vision' },
             { label: 'Affiliation & Accreditation', href: '/about#accreditation' },
             { label: 'Management', href: '/about#management' },
             { label: 'Principal', href: '/about#principal' },
             { label: 'Administration', href: '/about#administration' },
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
         ],
     },
     {
         label: 'Admissions',
         href: '/admissions',
         children: [
-<<<<<<< HEAD
-            { label: 'Admission Procedure', href: '/#admission-procedure' },
-            { label: 'Criteria for Admission', href: '/#criteria' },
-            { label: 'Programs Offered', href: '/#programs' },
-            { label: 'Fee Structure', href: '/#fee' },
-            { label: 'Scholarships', href: '/#scholarships' },
-=======
             { label: 'Admission Procedure', href: '/admissions#admission-procedure' },
             { label: 'Criteria for Admission', href: '/admissions#criteria' },
             { label: 'Programs Offered', href: '/admissions#programs' },
             { label: 'Fee Structure', href: '/admissions#fee' },
             { label: 'Scholarships', href: '/admissions#scholarships' },
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
         ],
     },
     {
         label: 'Academics',
         href: '/academics',
         children: [
-<<<<<<< HEAD
-            { label: 'Academic Calendar', href: '/#calendar' },
-            { label: 'Regulations & Syllabus', href: '/#syllabus' },
-            { label: 'Exam Cell', href: '/#exam' },
-            { label: 'R&D Cell', href: '/#rnd' },
-            { label: 'IQAC', href: '/#iqac' },
-            { label: 'Policies', href: '/#policies' },
-=======
             { label: 'Academic Calendar', href: '/academics#calendar' },
             { label: 'Regulations & Syllabus', href: '/academics#syllabus' },
             { label: 'Exam Cell', href: '/academics#exam' },
             { label: 'R&D Cell', href: '/academics#rnd' },
             { label: 'IQAC', href: '/academics#iqac' },
             { label: 'Policies', href: '/academics#policies' },
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
         ],
     },
     {
@@ -80,19 +48,12 @@ const navItems = [
         href: '/#courses',
         children: [
             { label: 'Computer Science & Engineering', href: '/department/CSE' },
-<<<<<<< HEAD
-            { label: 'CSE (AI & ML)', href: '/department/CSE-AIML' },
-=======
             { label: 'CSE (AI & ML)', href: '/department/CSEAIML' },
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
             { label: 'Electronics & Communication', href: '/department/ECE' },
             { label: 'Electrical & Electronics', href: '/department/EEE' },
             { label: 'Mechanical Engineering', href: '/department/MECH' },
             { label: 'Civil Engineering', href: '/department/CIVIL' },
-<<<<<<< HEAD
-            { label: 'Humanities & Sciences', href: '/department/H&S' },
-=======
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
+
             { label: 'MBA', href: '/department/MBA' },
             { label: 'MCA', href: '/department/MCA' },
         ],
@@ -101,43 +62,25 @@ const navItems = [
         label: 'Placements',
         href: '/placements',
         children: [
-<<<<<<< HEAD
-            { label: 'About T&P', href: '/#tp' },
-            { label: 'Placement Record', href: '/#record' },
-            { label: 'Internships', href: '/#internships' },
-            { label: 'News & Events', href: '/#events' },
-=======
             { label: 'About T&P', href: '/placements#tp' },
             { label: 'Placement Record', href: '/placements#record' },
             { label: 'Internships', href: '/placements#internships' },
             { label: 'News & Events', href: '/placements#events' },
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
         ],
     },
     {
         label: 'Campus Life',
         href: '/campus-life',
         children: [
-<<<<<<< HEAD
-            { label: 'Facilities', href: '/#facilities' },
-            { label: 'Infrastructure', href: '/#infrastructure' },
-            { label: 'Events', href: '/#events' },
-            { label: 'Gallery', href: '/#gallery' },
-=======
             { label: 'Facilities', href: '/campus-life#facilities' },
             { label: 'Infrastructure', href: '/campus-life#infrastructure' },
             { label: 'Events', href: '/campus-life#events' },
             { label: 'Gallery', href: '/campus-life#gallery' },
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
         ],
     },
     {
         label: 'Contact',
-<<<<<<< HEAD
-        href: '/#contact',
-=======
         href: '/contact',
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
     },
 ]
 
@@ -218,11 +161,7 @@ const Header = () => {
                 <div className="container mx-auto px-4">
                     <div className="flex items-center justify-between py-3">
                         {/* Logo */}
-<<<<<<< HEAD
-                        <a href="/#home" className="flex items-center gap-3 group">
-=======
                         <Link to="/" className="flex items-center gap-3 group">
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
                             <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                                 <span className="text-white font-bold text-xl font-['Outfit']">K</span>
                             </div>
@@ -245,67 +184,48 @@ const Header = () => {
                                     onMouseEnter={() => handleDropdownEnter(index)}
                                     onMouseLeave={handleDropdownLeave}
                                 >
-<<<<<<< HEAD
-                                    <NavLink
-                                        href={item.href}
-                                        className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-all ${activeDropdown === index
-=======
                                     <Link
                                         to={item.href}
-                                        className={`touch-target flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-all ${activeDropdown === index
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
-                                            ? 'bg-[var(--color-primary)] text-white'
+                                        className={`touch-target flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-all relative ${activeDropdown === index
+                                            ? 'bg-[var(--color-primary)] !text-white'
                                             : 'text-[var(--color-text-primary)] hover:bg-[var(--color-primary-light)]/20'
                                             }`}
                                     >
-                                        {item.label}
+                                        <span className="relative z-10">{item.label}</span>
                                         {item.children && (
                                             <ChevronDown
                                                 size={14}
-                                                className={`transition-transform ${activeDropdown === index ? 'rotate-180' : ''}`}
+                                                className={`transition-transform relative z-10 ${activeDropdown === index ? 'rotate-180' : ''}`}
                                             />
                                         )}
-<<<<<<< HEAD
-                                    </NavLink>
-=======
                                     </Link>
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
 
                                     {/* Dropdown */}
                                     <AnimatePresence>
-                                        {item.children && activeDropdown === index && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: 10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 10 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-[var(--color-border)] overflow-hidden z-50"
-                                            >
-                                                <div className="py-2">
-                                                    {item.children.map((child, childIndex) => (
-<<<<<<< HEAD
-                                                        <NavLink
-                                                            key={childIndex}
-                                                            href={child.href}
-                                                            className="block px-4 py-2.5 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-primary-light)]/20 hover:text-[var(--color-primary)] transition-colors"
-                                                            onClick={handleDropdownLeave}
-                                                        >
-                                                            {child.label}
-                                                        </NavLink>
-=======
-                                                        <Link
-                                                            key={childIndex}
-                                                            to={child.href}
-                                                            onClick={() => setActiveDropdown(null)}
-                                                            className="touch-target block px-4 py-2.5 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-primary-light)]/20 hover:text-[var(--color-primary)] transition-colors"
-                                                        >
-                                                            {child.label}
-                                                        </Link>
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
-                                                    ))}
-                                                </div>
-                                            </motion.div>
-                                        )}
+                                        {
+                                            item.children && activeDropdown === index && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: 10 }}
+                                                    transition={{ duration: 0.2 }}
+                                                    className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-[var(--color-border)] overflow-hidden z-50"
+                                                >
+                                                    <div className="py-2">
+                                                        {item.children.map((child, childIndex) => (
+                                                            <Link
+                                                                key={childIndex}
+                                                                to={child.href}
+                                                                onClick={() => setActiveDropdown(null)}
+                                                                className="touch-target block px-4 py-2.5 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-primary-light)]/20 hover:text-[var(--color-primary)] transition-colors"
+                                                            >
+                                                                {child.label}
+                                                            </Link>
+                                                        ))}
+                                                    </div>
+                                                </motion.div>
+                                            )
+                                        }
                                     </AnimatePresence>
                                 </div>
                             ))}
@@ -328,11 +248,12 @@ const Header = () => {
                                 className="lg:hidden p-2 rounded-lg hover:bg-[var(--color-primary-light)]/20 transition-colors"
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             >
-                                {isMobileMenuOpen ? (
-                                    <X size={24} className="text-[var(--color-text-primary)]" />
-                                ) : (
-                                    <Menu size={24} className="text-[var(--color-text-primary)]" />
-                                )}
+                                {
+                                    isMobileMenuOpen ? (
+                                        <X size={24} className="text-[var(--color-text-primary)]" />
+                                    ) : (
+                                        <Menu size={24} className="text-[var(--color-text-primary)]" />
+                                    )}
                             </button>
                         </div>
                     </div>
@@ -350,19 +271,6 @@ const Header = () => {
                             <div className="container mx-auto px-4 py-4 max-h-[70vh] overflow-y-auto">
                                 {navItems.map((item, index) => (
                                     <div key={index} className="border-b border-[var(--color-border)] last:border-0">
-<<<<<<< HEAD
-                                        <NavLink
-                                            href={item.href}
-                                            className="block py-3 text-[var(--color-text-primary)] font-medium"
-                                            onClick={() => !item.children && setIsMobileMenuOpen(false)}
-                                        >
-                                            {item.label}
-                                        </NavLink>
-                                        {item.children && (
-                                            <div className="pl-4 pb-2">
-                                                {item.children.map((child, childIndex) => (
-                                                    <NavLink
-=======
                                         <Link
                                             to={item.href}
                                             className="touch-target block py-3 text-[var(--color-text-primary)] font-medium"
@@ -374,19 +282,15 @@ const Header = () => {
                                             <div className="pl-4 pb-2">
                                                 {item.children.map((child, childIndex) => (
                                                     <Link
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
                                                         key={childIndex}
                                                         to={child.href}
                                                         className="touch-target block py-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-primary)]"
                                                         onClick={() => setIsMobileMenuOpen(false)}
                                                     >
                                                         {child.label}
-<<<<<<< HEAD
-                                                    </NavLink>
-=======
                                                     </Link>
->>>>>>> 2914c6e35f8db2816a366df56b8588007c693f53
-                                                ))}
+                                                ))
+                                                }
                                             </div>
                                         )}
                                     </div>

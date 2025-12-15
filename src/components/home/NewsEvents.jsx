@@ -57,7 +57,7 @@ const NewsEvents = () => {
                     className="text-center mb-20"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] font-['Outfit'] title-underline inline-block">Latest Updates</h2>
-                    <p className="text-[var(--color-text-secondary)] max-w-xl mx-auto mt-10 text-lg">
+                    <p className="text-[var(--color-text-secondary)] max-w-xl mx-auto mt-10 text-lg text-center">
                         Stay updated with the latest news, events, examination schedules, and important circulars.
                     </p>
                 </motion.div>
@@ -74,8 +74,8 @@ const NewsEvents = () => {
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
                             className={`flex items-center gap-3 px-7 md:px-9 py-4 md:py-5 rounded-2xl font-semibold text-base transition-all duration-300 ${activeTab === tab.id
-                                    ? 'bg-[var(--color-primary)] text-white shadow-xl shadow-[var(--color-primary)]/30'
-                                    : 'bg-white text-[var(--color-text-secondary)] border-2 border-[var(--color-border)] hover:border-[var(--color-primary-light)] hover:bg-[var(--color-surface)]'
+                                ? 'bg-[var(--color-primary)] text-white shadow-xl shadow-[var(--color-primary)]/30'
+                                : 'bg-white text-[var(--color-text-secondary)] border-2 border-[var(--color-border)] hover:border-[var(--color-primary-light)] hover:bg-[var(--color-surface)]'
                                 }`}
                         >
                             <tab.icon size={22} strokeWidth={1.5} />
@@ -102,7 +102,7 @@ const NewsEvents = () => {
                         >
                             {/* Header with icon */}
                             <div className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] px-10 py-6">
-                                <h3 className="text-xl font-bold text-white flex items-center gap-4 font-['Outfit']">
+                                <h3 className="text-xl font-bold text-white flex items-center justify-center gap-4 font-['Outfit']">
                                     <span className="p-3 bg-white/20 rounded-xl">
                                         {(() => {
                                             const Icon = tabs.find((t) => t.id === activeTab)?.icon
@@ -122,7 +122,7 @@ const NewsEvents = () => {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: index * 0.05 }}
-                                        className="flex items-center gap-6 px-10 py-6 hover:bg-[var(--color-surface)] transition-colors group"
+                                        className="flex items-center justify-center gap-6 px-10 py-6 hover:bg-[var(--color-surface)] transition-colors group"
                                     >
                                         {/* Date Badge - LARGER */}
                                         <div className="flex-shrink-0">
@@ -135,7 +135,7 @@ const NewsEvents = () => {
                                         </div>
 
                                         {/* Title */}
-                                        <p className="flex-1 text-[var(--color-text-primary)] text-base font-medium group-hover:text-[var(--color-primary)] transition-colors leading-relaxed">
+                                        <p className="text-[var(--color-text-primary)] text-base font-medium group-hover:text-[var(--color-primary)] transition-colors leading-relaxed text-center">
                                             {item.title}
                                         </p>
 
@@ -162,8 +162,8 @@ const NewsEvents = () => {
                         </motion.div>
                     </AnimatePresence>
                 </motion.div>
-            </div>
-        </section>
+            </div >
+        </section >
     )
 }
 
