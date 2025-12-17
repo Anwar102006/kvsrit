@@ -47,121 +47,125 @@ const NewsEvents = () => {
     const isInView = useInView(containerRef, { once: true, margin: '-100px' })
 
     return (
-        <section id="events" className="py-20 md:py-28 bg-[var(--color-background)]">
-            <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16" ref={containerRef}>
+        <section id="events" className="py-20 bg-[var(--color-background)]">
+            <div className="container mx-auto px-4 md:px-6" ref={containerRef}>
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-20"
+                    className="text-center mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] font-['Outfit'] title-underline inline-block">Latest Updates</h2>
-                    <p className="text-[var(--color-text-secondary)] max-w-xl mx-auto mt-10 text-lg text-center">
+                    <h2 className="section-title title-underline inline-block">Latest Updates</h2>
+                    <p className="text-[var(--color-text-secondary)] max-w-2xl mx-auto mt-6 text-lg text-center leading-relaxed">
                         Stay updated with the latest news, events, examination schedules, and important circulars.
                     </p>
                 </motion.div>
 
-                {/* Tabs - LARGER with better padding */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ delay: 0.2, duration: 0.5 }}
-                    className="flex flex-wrap justify-center gap-4 md:gap-5 mb-14"
-                >
-                    {tabs.map((tab) => (
-                        <button
-                            key={tab.id}
-                            onClick={() => setActiveTab(tab.id)}
-                            className={`flex items-center gap-3 px-7 md:px-9 py-4 md:py-5 rounded-2xl font-semibold text-base transition-all duration-300 ${activeTab === tab.id
-                                ? 'bg-[var(--color-primary)] text-white shadow-xl shadow-[var(--color-primary)]/30'
-                                : 'bg-white text-[var(--color-text-secondary)] border-2 border-[var(--color-border)] hover:border-[var(--color-primary-light)] hover:bg-[var(--color-surface)]'
-                                }`}
-                        >
-                            <tab.icon size={22} strokeWidth={1.5} />
-                            <span className="hidden sm:inline">{tab.label}</span>
-                        </button>
-                    ))}
-                </motion.div>
+                <div className="max-w-5xl mx-auto">
+                    {/* Tabs - Aligned with table */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                        className="flex flex-wrap justify-center sm:justify-start gap-4 mb-6 px-1"
+                    >
+                        {tabs.map((tab) => (
+                            <button
+                                key={tab.id}
+                                onClick={() => setActiveTab(tab.id)}
+                                className={`flex items-center gap-2 px-6 py-3 rounded-t-xl font-semibold text-sm md:text-base transition-all duration-200 border-t border-x border-b-0 ${activeTab === tab.id
+                                    ? 'bg-white text-[var(--color-primary)] border-[var(--color-border)] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] translate-y-[1px] z-10'
+                                    : 'bg-[var(--color-background)] text-[var(--color-text-secondary)] border-transparent hover:bg-[var(--color-surface)] opacity-70 hover:opacity-100'
+                                    }`}
+                            >
+                                <tab.icon size={18} strokeWidth={2} />
+                                <span>{tab.label}</span>
+                            </button>
+                        ))}
+                    </motion.div>
 
-                {/* Content */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : {}}
-                    transition={{ delay: 0.3, duration: 0.5 }}
-                    className="max-w-5xl mx-auto"
-                >
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={activeTab}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.3 }}
-                            className="bg-white rounded-3xl border-2 border-[var(--color-border)] overflow-hidden shadow-lg"
-                        >
-                            {/* Header with icon */}
-                            <div className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] px-10 py-6">
-                                <h3 className="text-xl font-bold text-white flex items-center justify-center gap-4 font-['Outfit']">
-                                    <span className="p-3 bg-white/20 rounded-xl">
-                                        {(() => {
-                                            const Icon = tabs.find((t) => t.id === activeTab)?.icon
-                                            return Icon ? <Icon size={24} strokeWidth={1.5} /> : null
-                                        })()}
-                                    </span>
-                                    {tabs.find((t) => t.id === activeTab)?.label}
-                                </h3>
-                            </div>
+                    {/* Content */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={isInView ? { opacity: 1 } : {}}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                    >
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeTab}
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.3 }}
+                                className="bg-white rounded-b-2xl rounded-tr-2xl rounded-tl-none border border-[var(--color-border)] overflow-hidden shadow-xl"
+                            >
+                                {/* Header with icon */}
+                                <div className="bg-[var(--color-primary)] px-6 py-4 flex items-center justify-center relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-black/0 via-white/10 to-black/0 opacity-30" />
+                                    <h3 className="text-lg md:text-xl font-bold text-white flex items-center gap-3 font-['Outfit'] relative z-10 uppercase tracking-wider">
+                                        <span className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
+                                            {(() => {
+                                                const Icon = tabs.find((t) => t.id === activeTab)?.icon
+                                                return Icon ? <Icon size={20} strokeWidth={2} /> : null
+                                            })()}
+                                        </span>
+                                        {tabs.find((t) => t.id === activeTab)?.label}
+                                    </h3>
+                                </div>
 
-                            {/* Items */}
-                            <div className="divide-y divide-[var(--color-border)]">
-                                {newsData[activeTab].map((item, index) => (
-                                    <motion.a
-                                        key={index}
-                                        href={item.link}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: index * 0.05 }}
-                                        className="flex items-center justify-center gap-6 px-10 py-6 hover:bg-[var(--color-surface)] transition-colors group"
-                                    >
-                                        {/* Date Badge - LARGER */}
-                                        <div className="flex-shrink-0">
-                                            <div className="inline-flex items-center gap-2.5 px-5 py-3 bg-[var(--color-primary)]/10 rounded-xl min-w-[110px] justify-center">
-                                                <Calendar size={18} className="text-[var(--color-primary)]" strokeWidth={1.5} />
-                                                <span className="text-sm font-bold text-[var(--color-primary)]">
-                                                    {item.date}
-                                                </span>
+                                {/* Items */}
+                                <div className="divide-y divide-[var(--color-border)]">
+                                    {newsData[activeTab].map((item, index) => (
+                                        <motion.a
+                                            key={index}
+                                            href={item.link}
+                                            initial={{ opacity: 0, x: -10 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: index * 0.05 }}
+                                            className="flex flex-col md:flex-row items-center gap-4 md:gap-6 px-8 py-6 hover:bg-[var(--color-surface)] transition-all group"
+                                        >
+                                            {/* Date Badge */}
+                                            <div className="flex-shrink-0 w-full md:w-auto flex justify-center">
+                                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg min-w-[160px] justify-center group-hover:border-[var(--color-primary-light)] transition-colors">
+                                                    <Calendar size={16} className="text-[var(--color-primary)]" strokeWidth={2} />
+                                                    <span className="text-sm font-bold text-[var(--color-text-secondary)] group-hover:text-[var(--color-primary)] transition-colors">
+                                                        {item.date}
+                                                    </span>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        {/* Title */}
-                                        <p className="text-[var(--color-text-primary)] text-base font-medium group-hover:text-[var(--color-primary)] transition-colors leading-relaxed text-center">
-                                            {item.title}
-                                        </p>
+                                            {/* Title */}
+                                            <p className="flex-grow text-[var(--color-text-primary)] text-lg font-medium text-center md:text-left leading-snug group-hover:text-[var(--color-primary)] transition-colors">
+                                                {item.title}
+                                            </p>
 
-                                        {/* Link Icon - LARGER */}
-                                        <ExternalLink
-                                            size={22}
-                                            strokeWidth={1.5}
-                                            className="flex-shrink-0 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-colors"
-                                        />
-                                    </motion.a>
-                                ))}
-                            </div>
+                                            {/* Link Icon */}
+                                            <div className="flex-shrink-0 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-2 group-hover:translate-x-0">
+                                                <ExternalLink
+                                                    size={20}
+                                                    strokeWidth={2}
+                                                    className="text-[var(--color-primary)]"
+                                                />
+                                            </div>
+                                        </motion.a>
+                                    ))}
+                                </div>
 
-                            {/* View More */}
-                            <div className="px-10 py-6 bg-[var(--color-surface)] border-t-2 border-[var(--color-border)]">
-                                <a
-                                    href="#all-news"
-                                    className="inline-flex items-center gap-2.5 text-base font-bold text-[var(--color-primary)] hover:gap-4 transition-all"
-                                >
-                                    View all {tabs.find((t) => t.id === activeTab)?.label}
-                                    <ChevronRight size={20} strokeWidth={2} />
-                                </a>
-                            </div>
-                        </motion.div>
-                    </AnimatePresence>
-                </motion.div>
+                                {/* View More */}
+                                <div className="px-8 py-5 bg-[var(--color-surface)] border-t border-[var(--color-border)] flex justify-center">
+                                    <a
+                                        href="#all-news"
+                                        className="inline-flex items-center gap-2 text-sm font-bold text-[var(--color-primary)] hover:gap-3 transition-all uppercase tracking-wide"
+                                    >
+                                        View all {tabs.find((t) => t.id === activeTab)?.label}
+                                        <ChevronRight size={16} strokeWidth={2} />
+                                    </a>
+                                </div>
+                            </motion.div>
+                        </AnimatePresence>
+                    </motion.div>
+                </div>
             </div >
         </section >
     )
