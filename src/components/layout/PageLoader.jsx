@@ -36,10 +36,10 @@ const PageLoader = ({ imagesLoaded }) => {
 
                 {/* NAAC Badge */}
                 <motion.div
-                    initial={{ x: 50, opacity: 0 }}
+                    initial={{ x: 30, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
-                    className="absolute top-0 right-[-60px] px-3 py-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-primary-light)] rounded-full"
+                    transition={{ delay: 0.4, duration: 0.5 }}
+                    className="absolute -top-2 -right-2 px-3 py-1.5 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-primary-light)] rounded-full shadow-md"
                 >
                     <span className="text-xs font-bold text-[var(--color-text-primary)]">NAAC A+</span>
                 </motion.div>
@@ -49,13 +49,13 @@ const PageLoader = ({ imagesLoaded }) => {
             <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                className="mt-8 text-center"
+                transition={{ delay: 0.3, duration: 0.5 }}
+                className="mt-10 text-center px-4"
             >
-                <h1 className="text-2xl md:text-3xl font-bold text-[var(--color-text-primary)] font-['Outfit']">
+                <h1 className="text-2xl md:text-3xl font-bold text-[var(--color-text-primary)] font-['Outfit'] mb-2">
                     Dr. K.V. Subba Reddy
                 </h1>
-                <p className="text-[var(--color-text-secondary)] mt-1">
+                <p className="text-base md:text-lg text-[var(--color-text-secondary)]">
                     Institute of Technology
                 </p>
             </motion.div>
@@ -64,16 +64,16 @@ const PageLoader = ({ imagesLoaded }) => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="mt-10 flex flex-col items-center gap-3"
+                transition={{ delay: 0.5 }}
+                className="mt-12 flex flex-col items-center gap-4"
             >
                 {/* Progress Bar */}
-                <div className="w-48 h-1.5 bg-[var(--color-border)] rounded-full overflow-hidden">
+                <div className="w-56 h-1.5 bg-[var(--color-border)] rounded-full overflow-hidden">
                     <motion.div
                         className="h-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)]"
                         initial={{ width: '0%' }}
-                        animate={{ width: imagesLoaded ? '100%' : '60%' }}
-                        transition={{ duration: imagesLoaded ? 0.3 : 0.8, ease: 'easeOut' }}
+                        animate={{ width: imagesLoaded ? '100%' : '70%' }}
+                        transition={{ duration: imagesLoaded ? 0.4 : 1, ease: 'easeOut' }}
                     />
                 </div>
 
@@ -81,9 +81,9 @@ const PageLoader = ({ imagesLoaded }) => {
                 <motion.p
                     animate={{ opacity: [0.5, 1, 0.5] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
-                    className="text-sm text-[var(--color-text-muted)]"
+                    className="text-sm text-[var(--color-text-muted)] font-medium"
                 >
-                    {imagesLoaded ? 'Starting...' : 'Loading...'}
+                    {imagesLoaded ? 'Almost ready...' : 'Loading resources...'}
                 </motion.p>
             </motion.div>
 

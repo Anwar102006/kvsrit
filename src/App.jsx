@@ -18,6 +18,7 @@ import AcademicsPage from './pages/AcademicsPage'
 import PlacementsPage from './pages/PlacementsPage'
 import CampusLifePage from './pages/CampusLifePage'
 import ContactPage from './pages/ContactPage'
+import LoginPage from './pages/LoginPage'
 
 function HomePage() {
     return (
@@ -69,6 +70,7 @@ function App() {
                     <Header />
                     <Routes>
                         <Route path="/" element={<HomePage />} />
+                        <Route path="/login" element={<LoginPage />} />
                         <Route path="/department/:code" element={<DepartmentDetail />} />
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/admissions" element={<AdmissionsPage />} />

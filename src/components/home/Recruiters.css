@@ -21,6 +21,9 @@
 .recruiters-header {
     text-align: center;
     margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .recruiters-title {
@@ -128,6 +131,7 @@
 @media (min-width: 768px) {
     .recruiters-stats-grid {
         grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
     }
 }
 

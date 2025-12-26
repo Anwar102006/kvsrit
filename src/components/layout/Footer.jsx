@@ -38,9 +38,11 @@ const Footer = () => {
                             </div>
                             <div className="college-name-wrapper">
                                 <h3 className="college-name">
-                                    Dr. K.V. Subba Reddy<br />
-                                    Institute of Technology
+                                    Dr. K.V. Subba Reddy
                                 </h3>
+                                <p className="college-tagline">
+                                    Institute of Technology
+                                </p>
                             </div>
                         </div>
                         <p className="college-description">

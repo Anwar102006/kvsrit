@@ -39,10 +39,10 @@ const WhyKVSR = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-12"
+                    className="text-center mb-16"
                 >
                     <h2 className="section-title title-underline">Why Dr. KVSRIT?</h2>
-                    <p className="section-subtitle mt-6">
+                    <p className="section-subtitle mt-8">
                         When it comes to academics, the college has highly Ph.D. qualified and experienced faculty
                         with expertise in various domains. The college follows choice-based credit system (CBCS)
                         with industry-oriented curriculum.

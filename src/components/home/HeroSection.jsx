@@ -58,7 +58,7 @@ const HeroSection = () => {
     }
 
     return (
-        <section id="home" className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden">
+        <section id="home" className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden" style={{ scrollMarginTop: 'var(--header-height)' }}>
             {/* Slides */}
             <AnimatePresence mode="wait">
                 <motion.div
@@ -170,8 +170,8 @@ const HeroSection = () => {
                         key={index}
                         onClick={() => setCurrentSlide(index)}
                         className={`transition-all duration-300 rounded-full ${currentSlide === index
-                                ? 'w-8 h-3 bg-[var(--color-accent)]'
-                                : 'w-3 h-3 bg-white/40 hover:bg-white/60'
+                            ? 'w-8 h-3 bg-[var(--color-accent)]'
+                            : 'w-3 h-3 bg-white/40 hover:bg-white/60'
                             }`}
                     />
                 ))}
@@ -185,16 +185,16 @@ const HeroSection = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                className="hidden lg:block absolute right-10 bottom-32 z-20"
+                className="hidden lg:block absolute right-8 bottom-36 z-20"
             >
-                <div className="glass rounded-2xl p-6 space-y-4 w-64">
+                <div className="glass rounded-2xl p-6 space-y-4 w-64 shadow-xl">
                     <div className="flex items-center gap-4">
                         <div className="w-12 h-12 rounded-xl bg-[var(--color-primary)]/20 flex items-center justify-center">
                             <GraduationCap className="text-[var(--color-primary)]" size={24} />
                         </div>
                         <div>
-                            <p className="text-2xl font-bold text-[var(--color-text-primary)]">2000+</p>
-                            <p className="text-sm text-[var(--color-text-secondary)]">Students Enrolled</p>
+                            <p className="text-2xl font-bold text-[var(--color-text-primary)] mb-0">2000+</p>
+                            <p className="text-sm text-[var(--color-text-secondary)] mb-0">Students Enrolled</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -202,8 +202,8 @@ const HeroSection = () => {
                             <Award className="text-[var(--color-accent)]" size={24} />
                         </div>
                         <div>
-                            <p className="text-2xl font-bold text-[var(--color-text-primary)]">150+</p>
-                            <p className="text-sm text-[var(--color-text-secondary)]">Expert Faculty</p>
+                            <p className="text-2xl font-bold text-[var(--color-text-primary)] mb-0">150+</p>
+                            <p className="text-sm text-[var(--color-text-secondary)] mb-0">Expert Faculty</p>
                         </div>
                     </div>
                 </div>

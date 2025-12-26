@@ -72,8 +72,8 @@ const Stats = () => {
     const isInView = useInView(containerRef, { once: true, margin: '-50px' })
 
     return (
-        <section className="relative py-16 -mt-16 z-20">
-            <div className="container mx-auto px-4">
+        <section className="relative py-20 -mt-20 z-20">
+            <div className="container mx-auto px-4 md:px-6">
                 <motion.div
                     ref={containerRef}
                     initial={{ opacity: 0, y: 30 }}
@@ -108,7 +108,7 @@ const Stats = () => {
                                 </h3>
 
                                 {/* Label */}
-                                <p className="text-[var(--color-text-secondary)] text-sm md:text-base">
+                                <p className="text-[var(--color-text-secondary)] text-sm md:text-base mb-0">
                                     {stat.label}
                                 </p>
 
